@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
        // val vv = Autos.editAuto()
        // Auto()
         val dog = Dog ("Mike",50.5)
-        println(String.format("${dog.name}:" + "пробежал за =  " +  "${dog.resultTime()}" + " часа"))
+        println("${dog.name}: пробежал за =    ${dog.resultTime()}  часа")
         val elephant = Elephant ("Ololo", 13.2)
-        println(String.format("${elephant.name}:" + "пробежал за = " +  "${elephant.resultTime()}" + " часа" ))
+        println("${elephant.name}: пробежал за =   ${elephant.resultTime()}   часа")
     }
 }
