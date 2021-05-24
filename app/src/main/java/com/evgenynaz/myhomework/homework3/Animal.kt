@@ -5,7 +5,7 @@ import java.util.*
 
 open class Animal (val speed:Double) {
     companion object {
-        private const val DISTANCE = 1080
+        const val DISTANCE = 1080
     }
     fun resultTime(): String {
         return (String.format("%.3f", (DISTANCE / speed) / 3600))
