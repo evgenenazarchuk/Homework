@@ -86,10 +86,10 @@ class MainActivity : AppCompatActivity() {
         )
         fun open(){
             spis.forEach {
-                println("Name: ${it.nameEmployee}, salary: ${it.salary} $")
+                println("Имя сотрудника: ${it.nameEmployee}, Заработная плата: ${it.salary}")
                 when (it) {
-                    is Chief -> println("имеет ${it.managers.size} подчиненных")
-                    is Manager -> println("имеет ${it.workers.size} подчиненных")
+                    is Chief -> println("У начальника, есть такое количество менеджеровЖ ${it.managers.size} ")
+                    is Manager -> println("У менеждера , есть такое количество рабочих: ${it.workers.size}")
                     is Workers -> it.work()
                 }
             }
