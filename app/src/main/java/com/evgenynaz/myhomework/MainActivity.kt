@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 "Джейсон", 1600.50,
                 (arrayListOf(timManager, maksManager))
             )
-        val res = arrayListOf(
+        val spis = arrayListOf(
             victor,
             timofei,
             sergei,
@@ -83,14 +83,16 @@ class MainActivity : AppCompatActivity() {
             maksManager,
             samChief,
             jayChief,
-        ).forEach {
-            println("Name: ${it.nameEmployee}, salary: ${it.salary} $")
+        )
 
+        val spisok = spis.forEach {
+            println("Name: ${it.nameEmployee}, salary: ${it.salary} $")
             when (it) {
                 is Chief -> println("имеет ${it.managers.size} подчиненных")
                 is Manager -> println("имеет ${it.workers.size} подчиненных")
                 is Workers -> it.work()
             }
         }
+
     }
 }
