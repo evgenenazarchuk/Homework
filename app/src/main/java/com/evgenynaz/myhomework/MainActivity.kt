@@ -84,15 +84,17 @@ class MainActivity : AppCompatActivity() {
             samChief,
             jayChief,
         )
-
-        val spisok = spis.forEach {
-            println("Name: ${it.nameEmployee}, salary: ${it.salary} $")
-            when (it) {
-                is Chief -> println("имеет ${it.managers.size} подчиненных")
-                is Manager -> println("имеет ${it.workers.size} подчиненных")
-                is Workers -> it.work()
+        fun open(){
+            spis.forEach {
+                println("Name: ${it.nameEmployee}, salary: ${it.salary} $")
+                when (it) {
+                    is Chief -> println("имеет ${it.managers.size} подчиненных")
+                    is Manager -> println("имеет ${it.workers.size} подчиненных")
+                    is Workers -> it.work()
+                }
             }
         }
+        open()
 
     }
 }
