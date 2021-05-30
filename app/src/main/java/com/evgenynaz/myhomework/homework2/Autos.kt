@@ -15,6 +15,5 @@ object Autos {
         println(autoFive.getCar())
         val autoSix = Auto("kia", "blue", 2.0, "ABCH-10")
         println(autoSix.getCar())
-
     }
 }

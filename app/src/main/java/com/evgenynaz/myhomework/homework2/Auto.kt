@@ -1,6 +1,6 @@
 package com.evgenynaz.myhomework.homework2
 
-class Auto(
+open class Auto(
     val model: String,
     var color: String = "white",
     val engine: Double,
@@ -8,11 +8,9 @@ class Auto(
 ) {
 
     fun getCar(): String {
-        var auto: String =
-            "Auto: model - $model, color - $color, engine - $engine, number - ${
-                number ?: "Transit"
-            }"
-        return auto
+        return "Auto: model - $model, color - $color, engine - $engine, number - ${
+            number ?: "Transit"
+        }"
     }
 
 
