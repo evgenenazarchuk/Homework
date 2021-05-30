@@ -1,20 +1,38 @@
 package com.evgenynaz.myhomework
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 //import com.evgenynaz.myhomework.homework2.Autos
 import com.evgenynaz.myhomework.homework3.Dog
 import com.evgenynaz.myhomework.homework3.Elephant
 import com.evgenynaz.myhomework.homework4.Chief
-import com.evgenynaz.myhomework.homework4.Employee
 import com.evgenynaz.myhomework.homework4.Manager
 import com.evgenynaz.myhomework.homework4.Workers
 
 
 class MainActivity : AppCompatActivity() {
+
+
+    private lateinit var textView: TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        textView = findViewById(R.id.text)
+        textView.setOnClickListener {
+            val intent = Intent(this, Homework6Activity::class.java)
+            startActivity(intent)
+
+        }
+
+
+
+
+
         //Autos.editAuto()
         val dog = Dog("Mike", 50.5)
         println("${dog.name}: пробежал за =    ${dog.resultTime()}  часа")
@@ -84,7 +102,8 @@ class MainActivity : AppCompatActivity() {
             samChief,
             jayChief,
         )
-        fun open(){
+
+        fun open() {
             spis.forEach {
                 println("Имя сотрудника: ${it.nameEmployee}, Заработная плата: ${it.salary}")
                 when (it) {
@@ -97,4 +116,8 @@ class MainActivity : AppCompatActivity() {
         open()
 
     }
+
+
 }
+
+
