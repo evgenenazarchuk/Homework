@@ -15,19 +15,13 @@ import com.evgenynaz.myhomework.homework4.Worker
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var textView: TextView
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.text)
-        textView.setOnClickListener {
-            val intent = Intent(this, Homework6Activity::class.java)
-            startActivity(intent)
-
-        }
 
 
 
