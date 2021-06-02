@@ -10,21 +10,14 @@ import com.evgenynaz.myhomework.homework3.Elephant
 import com.evgenynaz.myhomework.homework4.Chief
 import com.evgenynaz.myhomework.homework4.Manager
 import com.evgenynaz.myhomework.homework4.Worker
-
+import com.evgenynaz.myhomework.homework6.Homework6Activity
 
 class MainActivity : AppCompatActivity() {
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
-
 
 
         //Autos.editAuto()
