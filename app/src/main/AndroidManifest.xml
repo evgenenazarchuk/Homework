@@ -16,8 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".homework5.Homework5Activity">
-        </activity>
+        <activity android:name=".homework5.Homework5Activity" />
     </application>
 
 </manifest>
