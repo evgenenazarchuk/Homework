@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyHomework</string>
+    <string name="homework6">Homework6</string>
+    <string name="homework7">Homework7</string>
+    <string name="Start">START</string>
+    <string name="Send">SEND</string>
 </resources>

@@ -3,24 +3,41 @@ package com.evgenynaz.myhomework
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
-//import com.evgenynaz.myhomework.homework2.Autos
+import com.evgenynaz.myhomework.homework2.Autos
 import com.evgenynaz.myhomework.homework3.Dog
 import com.evgenynaz.myhomework.homework3.Elephant
 import com.evgenynaz.myhomework.homework4.Chief
 import com.evgenynaz.myhomework.homework4.Manager
 import com.evgenynaz.myhomework.homework4.Worker
 import com.evgenynaz.myhomework.homework6.Homework6Activity
+import com.evgenynaz.myhomework.homework7.Homework7Activity
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var homework6: Button
+    private lateinit var homework7one: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        homework6 = findViewById(R.id.button6_homework)
+        homework6.setOnClickListener {
 
-        //Autos.editAuto()
+            val intent = Intent(this, Homework6Activity::class.java)
+            startActivity(intent)
+        }
+        homework7one = findViewById(R.id.button7_homework)
+        homework7one.setOnClickListener {
+            val intent1 = Intent(this, Homework7Activity::class.java)
+            startActivity(intent1)
+        }
+
+
+        /*//Autos.editAuto()
         val dog = Dog("Mike", 50.5)
         println("${dog.name}: пробежал за =    ${dog.resultTime()}  часа")
         val elephant = Elephant("Ololo", 13.2)
@@ -100,11 +117,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        display()
+        display()*/
 
     }
 
 
 }
+
+
 
 
