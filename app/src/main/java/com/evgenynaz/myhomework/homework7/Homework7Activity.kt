@@ -30,12 +30,14 @@ class Homework7Activity : AppCompatActivity() {
                 text.text = "${millisUntilFinished / 1000}"
             }
 
+
+
             override fun onFinish() {
                 //  text.text = "done"
                 text.visibility = View.GONE
                 login.visibility = View.VISIBLE
                 password.visibility = View.VISIBLE
-                start.text = "SEND"
+                start.text = "Войти"
                 val login: String = login.text.toString()
                 val password: String = password.text.toString()
                 start.setOnClickListener {
