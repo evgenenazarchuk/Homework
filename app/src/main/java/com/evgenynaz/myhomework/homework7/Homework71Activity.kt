@@ -3,25 +3,23 @@ package com.evgenynaz.myhomework.homework7
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import java.lang.reflect.Array.get
+import com.evgenynaz.myhomework.R
+
 
 class Homework71Activity:AppCompatActivity() {
-
+    private lateinit var tvView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_homework71)
+        tvView =  findViewById(R.id.tvView)
+        val intent = intent
 
-       val  textView =  TextView(this)
-        textView.textSize = 26F
-        textView.setPadding(16, 16, 16, 16)
-        val arguments = intent.extras
+        val login = intent.getStringExtra("Login")
+        val password = intent.getStringExtra("Password")
 
-        if(arguments!=null){
-            var login = arguments.get("login").toString();
-            val password = arguments.get("password").toString();
-            textView.setText("Login:$login , Password: $password")
-        }
+        tvView.text = "Your login and password: $login $password"
 
-        setContentView(textView);
+
     }
 }
 
