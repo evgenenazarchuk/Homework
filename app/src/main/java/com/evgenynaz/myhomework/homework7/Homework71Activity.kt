@@ -17,7 +17,7 @@ class Homework71Activity:AppCompatActivity() {
         val login = intent.getStringExtra("Login")
         val password = intent.getStringExtra("Password")
 
-        tvView.text = "Your login and password: $login $password"
+        tvView.text = "Информация о пользователе: $login $password"
 
 
     }
