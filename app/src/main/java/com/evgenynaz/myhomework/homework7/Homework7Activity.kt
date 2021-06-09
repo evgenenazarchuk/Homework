@@ -2,57 +2,76 @@ package com.evgenynaz.myhomework.homework7
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.evgenynaz.myhomework.R
+import com.evgenynaz.myhomework.databinding.ActivityHomework7Binding
 
 class Homework7Activity : AppCompatActivity() {
-    private lateinit var text: TextView
-    private lateinit var start: Button
-    private lateinit var login: EditText
-    private lateinit var password: EditText
+    private var counterTime = 10
+    private lateinit var binding: ActivityHomework7Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homework7)
-        text = findViewById(R.id.tv_textView)
-        start = findViewById(R.id.button_start)
-        password = findViewById(R.id.edit_login)
-        login = findViewById(R.id.edit_password)
+        binding = ActivityHomework7Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         val intent = Intent(this, Homework7Activity::class.java)
 
-        val clock = object : CountDownTimer(10000, 1000) {
+
+        /*val clock = object : CountDownTimer(10000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
                 text.text = "${millisUntilFinished / 1000}"
-            }
+            }*/
 
 
-
-            override fun onFinish() {
+        binding.buttonStart?.setOnClickListener {
+            binding.tvTextView?.text = (counterTime - 1).toString()
+            counterTime--
+            if (counterTime <= 0) {
                 //  text.text = "done"
-                text.visibility = View.GONE
-                login.visibility = View.VISIBLE
-                password.visibility = View.VISIBLE
-                start.text = "Войти"
-                val login: String = login.text.toString()
-                val password: String = password.text.toString()
-                start.setOnClickListener {
-                //    val intent1 = Intent(this, Homework71Activity::class.java)
-                    intent.putExtra("Login", login)
-                    intent.putExtra("Password", password)
+                binding.tvTextView.visibility = View.GONE
+                binding.editLogin.visibility = View.VISIBLE
+                binding.editPassword.visibility = View.VISIBLE
+                binding.buttonStart.text = "Войти"
+                val login: String = binding.editLogin.text.toString()
+                val password: String = binding.editPassword.text.toString()
+                binding.buttonStart.setOnClickListener {
+                    //    val intent1 = Intent(this, Homework71Activity::class.java)
+                    intent.putExtra(LOGIN, login)
+                    intent.putExtra(PASSWORD, password)
                     startActivity(intent)
                 }
             }
         }
-        start.setOnClickListener {
-            clock.start()
+        /*start.setOnClickListener {
+            clock.start()*/
+
+
+         fun onResume() {
+            super.onResume()
+            binding.tvTextView.text = counterTime.toString()
         }
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(COUNTER_KEY, counterTime)
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        counterTime = savedInstanceState.getInt(COUNTER_KEY)
+    }
+
+    companion object {
+        const val LOGIN = "LOGIN"
+        const val PASSWORD = "PASSWORD"
+        private const val COUNTER_KEY = "COUNTER_KEY"
+    }
 }
+
+
+
 
 
 

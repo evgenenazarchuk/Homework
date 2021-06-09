@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
     <TextView
         android:id="@+id/tvView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textSize="20sp">
-    </TextView>
-</LinearLayout>
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="70dp"></TextView>
+
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="289dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/HOMEWORK8"
+        android:text="CLOSE"
+        app:layout_constraintTop_toBottomOf="@+id/tvView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="122dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_business_center_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:text="ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

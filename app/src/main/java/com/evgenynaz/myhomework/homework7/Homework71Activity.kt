@@ -1,28 +1,29 @@
 package com.evgenynaz.myhomework.homework7
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.evgenynaz.myhomework.R
+import com.evgenynaz.myhomework.databinding.ActivityHomework71Binding
 
 
-class Homework71Activity:AppCompatActivity() {
-    private lateinit var tvView: TextView
+class Homework71Activity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomework71Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homework71)
-        tvView =  findViewById(R.id.tvView)
+        binding = ActivityHomework71Binding.inflate(layoutInflater)
+        setContentView(binding.root)
         val intent = intent
-
-        val login = intent.getStringExtra("Login")
-        val password = intent.getStringExtra("Password")
-
-        tvView.text = "Информация о пользователе: $login $password"
-
+        val login = intent.getStringExtra("LOGIN")
+        val password = intent.getStringExtra("PASSWORD")
+        binding.tvView.text = "Информация о пользователе: $login $password"
+        binding.buttonClose.setOnClickListener {
+            finish()
+        }
 
     }
 }
+
+
 
 
 

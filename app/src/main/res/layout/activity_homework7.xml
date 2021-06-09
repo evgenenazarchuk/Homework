@@ -9,18 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="50dp"
-        android:text="TIMER" />
-
-    <EditText
-        android:id="@+id/edit_password"
-        android:layout_width="147dp"
-        android:layout_height="12dp"
-        android:layout_gravity="center"
-        android:background="@color/HOMEWORK7"
-        android:hint="Login"
-        android:visibility="invisible" />
-
+        android:text="10"
+        android:textSize="50dp" />
 
     <EditText
         android:id="@+id/edit_login"
@@ -38,8 +28,18 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="150dp"
-        android:background="@color/white"
-        android:text="@string/Start"/>
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/HOMEWORK8"
+        android:text="@string/Start" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="147dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:background="@color/HOMEWORK7"
+        android:hint="Login"
+        android:visibility="invisible"/>
+
 
 </FrameLayout>
