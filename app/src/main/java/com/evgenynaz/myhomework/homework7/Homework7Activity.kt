@@ -42,15 +42,16 @@ class Homework7Activity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
         }
+
         /*start.setOnClickListener {
             clock.start()*/
+    }
 
-
-         fun onResume() {
-            super.onResume()
-            binding.tvTextView.text = counterTime.toString()
-        }
+    override fun onResume() {
+        super.onResume()
+        binding.tvTextView.text = counterTime.toString()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
