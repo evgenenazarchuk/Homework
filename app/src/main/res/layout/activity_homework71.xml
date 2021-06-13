@@ -30,22 +30,23 @@
         tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_internet_res"
         android:layout_width="122dp"
         android:layout_height="111dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ic_baseline_business_center_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!--android:src="@drawable/ic_baseline_business_center_24"-->
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="149dp"
-        android:layout_height="48dp"
-        android:text="ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="149dp"
+    android:layout_height="48dp"
+    android:text="ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ"
+    tools:layout_editor_absoluteX="155dp"
+    tools:layout_editor_absoluteY="16dp"
+    tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

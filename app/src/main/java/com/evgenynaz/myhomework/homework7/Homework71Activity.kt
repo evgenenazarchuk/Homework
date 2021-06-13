@@ -3,6 +3,7 @@ package com.evgenynaz.myhomework.homework7
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.evgenynaz.myhomework.databinding.ActivityHomework71Binding
 
 
@@ -19,6 +20,10 @@ class Homework71Activity : AppCompatActivity() {
         binding.buttonClose.setOnClickListener {
             finish()
         }
+        Glide
+            .with(this)
+            .load("https://www.imgonline.com.ua/examples/bee-on-daisy.jpg")
+            .into(binding.imageViewInternetRes)
 
     }
 }
