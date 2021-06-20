@@ -1,33 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/tvView"
-        android:layout_width="150dp"
-        android:layout_height="57dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="70dp"></TextView>
 
     <Button
         android:id="@+id/button_close"
-        android:layout_width="289dp"
-        android:layout_height="36dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginTop="16dp"
         android:backgroundTint="@color/HOMEWORK8"
-        android:text="CLOSE"
-        app:layout_constraintTop_toBottomOf="@+id/tvView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        android:text="@string/Close"
+        app:layout_constraintStart_toStartOf="@+id/imageView_internet_res"
+        app:layout_constraintEnd_toEndOf="@+id/out_password"
+        tools:layout_editor_absoluteY="143dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView_internet_res"
@@ -37,16 +26,25 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/out_login"
+        android:layout_width="99dp"
+        android:layout_height="17dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/out_password"
+        android:layout_width="99dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/out_login"
+        app:layout_constraintTop_toBottomOf="@+id/out_login" />
     <!--android:src="@drawable/ic_baseline_business_center_24"-->
 
-
-<TextView
-    android:id="@+id/textView2"
-    android:layout_width="149dp"
-    android:layout_height="48dp"
-    android:text="ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ"
-    tools:layout_editor_absoluteX="155dp"
-    tools:layout_editor_absoluteY="16dp"
-    tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

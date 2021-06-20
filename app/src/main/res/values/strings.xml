@@ -4,4 +4,8 @@
     <string name="homework7">Homework7</string>
     <string name="Start">START</string>
     <string name="Send">SEND</string>
+    <string name="Password">PASSWORD</string>
+    <string name="Login">LOGIN</string>
+    <string name="Close">CLOSE</string>
+    <string name="RecyclerView">Homework10</string>
 </resources>

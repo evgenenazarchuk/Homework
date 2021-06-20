@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework2.Autos
 import com.evgenynaz.myhomework.homework3.Dog
 import com.evgenynaz.myhomework.homework3.Elephant
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var homework6: Button
     private lateinit var homework7one: Button
+    private lateinit var homework10: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         homework7one.setOnClickListener {
             val intent1 = Intent(this, Homework7Activity::class.java)
             startActivity(intent1)
+        }
+        homework10 = findViewById(R.id.button10_homework)
+        homework10.setOnClickListener {
+            val intent2 = Intent(this, Homework10Activity::class.java)
+            startActivity(intent2)
         }
 
 

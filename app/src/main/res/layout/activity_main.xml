@@ -43,4 +43,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button6_homework" />
 
+    <Button
+        android:id="@+id/button10_homework"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="#A17CE3"
+        android:text="@string/RecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
