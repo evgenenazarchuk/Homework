@@ -30,7 +30,8 @@ class CandyAdapter(
         notifyDataSetChanged()
     }
 
-    class CandyViewHolder(private val bindingView: ClauseCandyBinding) :
+    class CandyViewHolder(
+        private val bindingView: ClauseCandyBinding) :
         RecyclerView.ViewHolder(bindingView.root) {
 
         //private val brand: TextView = itemView.findViewById(R.id.brand)
