@@ -7,9 +7,6 @@ class Candy(
 
 const val NUMBER_CANDY = 300
 
-enum class Brand {
-    SNICKERS, MARS, BOUNTY
-}
 
 fun candyView(): MutableList<Candy> {
 
