@@ -6,16 +6,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <ImageView
+        android:id="@+id/image_candy"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/barcodeNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/brand"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="center"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
         android:textColor="@color/black"
-        tools:text="Brand"/>
+        tools:text="Brand"
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
@@ -29,5 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:textColor="@color/red"
         tools:text="Barcode Number"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
