@@ -39,19 +39,19 @@ class CandyAdapter(
         fun bind(item: Candy) {
             bindingView.brand.text = item.brand.toString()
             bindingView.barcodeNumber.text = item.barcodeNumber.toString()
-            if (bindingView.brand.text ==MARS.toString()) {
+            if (bindingView.brand.text contentEquals MARS.toString()) {
                       Glide
                           .with(itemView.context)
                           .load("https://static.wikia.nocookie.net/edopedia/images/d/dc/%D0%9C%D0%B0%D1%80%D1%81.JPG/revision/latest?cb=20170414131137&path-prefix=ru")
                           .into(bindingView.imageCandy)
                   }
-                  else if (bindingView.brand.text ==SNICKERS.toString()) {
+                  else if (bindingView.brand.text contentEquals SNICKERS.toString()) {
                       Glide
                           .with(itemView.context)
                           .load("https://snack.je/wp-content/uploads/2021/02/snickers-brownie-2pck.png")
                           .into(bindingView.imageCandy)
                   }
-                  else if (bindingView.brand.text ==BOUNTY.toString()) {
+                  else if (bindingView.brand.text contentEquals BOUNTY.toString()) {
                       Glide
                           .with(itemView.context)
                           .load("https://www.barista-ltd.ru/components/com_jshopping/files/img_products/snacks-for-vending-bounty.jpg")
