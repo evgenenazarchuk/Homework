@@ -4,11 +4,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    val candyLiveData: MutableLiveData<MutableList<Candy>> = MutableLiveData()
-
     init {
         getCandyList()
     }
+
+    val candyLiveData: MutableLiveData<MutableList<Candy>> = MutableLiveData()
+
 
     private fun getCandyList() {
         candyLiveData.value = candyView()
