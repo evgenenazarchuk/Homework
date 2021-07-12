@@ -9,13 +9,12 @@
         android:id="@+id/tv_n"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="25dp"
         android:gravity="center"
-        android:textColor="@color/teal_200"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_photo2"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Marka" />
+        tools:text="Brand" />
 
     <TextView
         android:id="@+id/tv_k"
@@ -23,12 +22,11 @@
         android:layout_height="0dp"
         android:layout_marginStart="68dp"
         android:textColor="@color/red"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/im_picther"
         app:layout_constraintStart_toEndOf="@+id/tv_n"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:text="Kod" />
+        tools:text="Barcode" />
 
     <ImageView
         android:id="@+id/im_picther"
@@ -36,7 +34,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="@color/red"
-        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/tv_k"
         app:layout_constraintTop_toTopOf="parent" />
 

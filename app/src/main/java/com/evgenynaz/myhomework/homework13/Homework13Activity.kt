@@ -29,7 +29,7 @@ class Homework13Activity : AppCompatActivity() {
         toast.show()
 
         val fragmentCandy = CandyFragment().apply {
-            arguments = bundleOf(FragmentBarcode.KEY to candyView())
+            arguments = bundleOf(FragmentBarcode.KEY to candy)
         }
 
         supportFragmentManager.beginTransaction()
