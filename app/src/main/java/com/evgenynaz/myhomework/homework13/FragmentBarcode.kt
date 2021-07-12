@@ -31,7 +31,7 @@ class FragmentBarcode : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var listCandy: MutableList<Candy> = mutableListOf()
-        val sweetAdapter = SweetAdapter2(listCandy) { clickListener(it) }
+        val sweetAdapter = CandyAdapter(listCandy) { clickListener(it) }
 
         binding!!.rvSweet2?.layoutManager =
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)

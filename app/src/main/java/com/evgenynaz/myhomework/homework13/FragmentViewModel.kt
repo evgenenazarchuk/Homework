@@ -12,10 +12,10 @@ class FragmentViewModel : ViewModel() {
     val candyLiveData2: MutableLiveData<MutableList<Candy>> = MutableLiveData()
 
     init {
-        this.getSweetsList()
+        this.getCandyList()
     }
 
-    private fun getSweetsList() {
+    private fun getCandyList() {
         candyLiveData2.value = candyView()
     }
 }

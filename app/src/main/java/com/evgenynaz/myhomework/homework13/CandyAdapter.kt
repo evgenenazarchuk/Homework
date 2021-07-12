@@ -7,10 +7,10 @@ import com.evgenynaz.myhomework.databinding.FragmentCandyBinding
 import com.evgenynaz.myhomework.homework10.Candy
 
 
-class SweetAdapter2(
+class CandyAdapter(
     private val sweetList: MutableList<Candy>,
     private val clickListener: (Candy) -> Unit
-) : RecyclerView.Adapter<SweetAdapter2.Candy2ViewHolder>() {
+) : RecyclerView.Adapter<CandyAdapter.Candy2ViewHolder>() {
 
     override fun getItemCount(): Int = sweetList.size
 
