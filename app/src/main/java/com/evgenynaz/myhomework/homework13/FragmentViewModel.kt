@@ -4,17 +4,18 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.evgenynaz.myhomework.homework10.Candy
-import com.evgenynaz.myhomework.homework10.CandyView
+import com.evgenynaz.myhomework.homework10.candyView
 
-class FragmentCandyCode : ViewModel() {
+
+class FragmentViewModel : ViewModel() {
 
     val candyLiveData2: MutableLiveData<MutableList<Candy>> = MutableLiveData()
 
     init {
-        getCandy()
+        this.getSweetsList()
     }
 
-    private fun getCandy() {
-        candyLiveData2.value = CandyView().candyView()
+    private fun getSweetsList() {
+        candyLiveData2.value = candyView()
     }
 }

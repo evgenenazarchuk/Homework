@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework13.Homework13Activity
+import com.evgenynaz.myhomework.homework15.Homework15Activity
 import com.evgenynaz.myhomework.homework2.Autos
 import com.evgenynaz.myhomework.homework3.Dog
 import com.evgenynaz.myhomework.homework3.Elephant
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homework7one: Button
     private lateinit var homework10: Button
     private lateinit var homework13: Button
-
+    private lateinit var homework15: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,6 +50,12 @@ class MainActivity : AppCompatActivity() {
         homework13.setOnClickListener {
             val intent3 = Intent(this, Homework13Activity::class.java)
             startActivity(intent3)
+        }
+
+        homework15 = findViewById(R.id.button15_homework)
+        homework15.setOnClickListener {
+            val intent4 = Intent(this, Homework15Activity::class.java)
+            startActivity(intent4)
         }
         /*//Autos.editAuto()
         val dog = Dog("Mike", 50.5)

@@ -1,29 +1,29 @@
 package com.evgenynaz.myhomework.homework13
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.evgenynaz.myhomework.databinding.FragmentBarcodeCandyBinding
+import com.evgenynaz.myhomework.databinding.MainFragmentsBinding
 import com.evgenynaz.myhomework.homework10.Candy
-import java.util.Observer
 
-class FragmentCandy : Fragment() {
-    private var binding: FragmentBarcodeCandyBinding? = null
-    private val myViewModel: FragmentCandyCode by viewModels()
+
+class FragmentBarcode : Fragment() {
+
+    private var binding: MainFragmentsBinding? = null
+    private val mainViewModel: FragmentViewModel by viewModels()
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBarcodeCandyBinding.inflate(inflater, container, false)
+        binding = MainFragmentsBinding.inflate(inflater, container, false)
         return binding!!.root
     }
 
@@ -31,23 +31,20 @@ class FragmentCandy : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var listCandy: MutableList<Candy> = mutableListOf()
-        val candyAdapter = CandyAdapter(listCandy) { clickListener(it) }
+        val sweetAdapter = SweetAdapter2(listCandy) { clickListener(it) }
 
         binding!!.rvSweet2?.layoutManager =
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-        binding!!.rvSweet2?.adapter = candyAdapter
+        binding!!.rvSweet2?.adapter = sweetAdapter
 
-        myViewModel.candyLiveData2.observe(this.viewLifecycleOwner, Observer())
+        mainViewModel.candyLiveData2.observe(this.viewLifecycleOwner, Observer {
+            sweetAdapter.update(it)
+        })
     }
 
+    private fun clickListener(sweet: Candy) {
 
-    private fun Observer() {
-
-    }
-
-    private fun clickListener(candy: Candy) {
-
-        (activity as? Homework13Activity)?.clickListener(candy)
+        (activity as? Homework13Activity)?.clickListener(sweet)
     }
 
     override fun onDestroyView() {
@@ -56,13 +53,7 @@ class FragmentCandy : Fragment() {
     }
 
     companion object {
-        const val TAG = "CandyBarcode"
+        const val TAG = "FragmentBarcode"
         const val KEY = "Key"
     }
 }
-
-private fun Any.observe(viewLifecycleOwner: LifecycleOwner, observer: Unit) {
-
-}
-
-
