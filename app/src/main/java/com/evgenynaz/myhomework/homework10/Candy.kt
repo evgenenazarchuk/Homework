@@ -1,9 +1,9 @@
 package com.evgenynaz.myhomework.homework10
-
-class Candy(
+import java.io.Serializable
+data class Candy(
     val brand: Brand,
     val barcodeNumber: Int
-)
+): Serializable
 
 const val NUMBER_CANDY = 300
 
