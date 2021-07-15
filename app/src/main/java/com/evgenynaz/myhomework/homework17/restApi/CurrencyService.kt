@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object CurrencyService {
 
     private const val BASE_URL = "https://pro-api.coinmarketcap.com/"
-
+    const val API_KEY = "4a3d95bb-27f0-4a23-82fd-f0ff92d09416"
     private fun getRetrofit() = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
