@@ -6,8 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evgenynaz.myhomework.databinding.ActivityHomework10Binding
 
-class Homework10Activity : AppCompatActivity() {
-
+class Homework10Activity: AppCompatActivity() {
     private lateinit var binding: ActivityHomework10Binding
     private val myViewModel: MainViewModel by viewModels()
 
@@ -17,9 +16,9 @@ class Homework10Activity : AppCompatActivity() {
         setContentView(binding.root)
         val candyAdapter = CandyAdapter(candyView())
 
-        binding.recyclerCandy.layoutManager =
+        binding.rvCandy?.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.recyclerCandy.adapter = candyAdapter
+        binding.rvCandy?.adapter = candyAdapter
         myViewModel.candyLiveData.observe(this, {
             candyAdapter.update(it)
         })

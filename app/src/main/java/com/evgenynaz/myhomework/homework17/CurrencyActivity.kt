@@ -12,7 +12,7 @@ class CurrencyActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomework17Binding
     private val myViewModel: Homework17ViewModel by viewModels {
-        Homework17ViewModel.HomeWork17ViewModelFactory((application as MySuperApp).currencyRepository)
+        HomeWork17ViewModelFactory((application as MySuperApp).currencyRepository)
     }
 
     private val currencyAdapter: CurrencyAdapter = CurrencyAdapter()
@@ -23,7 +23,7 @@ class CurrencyActivity : AppCompatActivity() {
         binding = ActivityHomework17Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        with(binding.rvCurrency) {
+        with(binding.currency) {
             adapter = currencyAdapter
             layoutManager = LinearLayoutManager(this@CurrencyActivity)
         }
