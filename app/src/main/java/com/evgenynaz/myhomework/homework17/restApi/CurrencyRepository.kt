@@ -9,13 +9,13 @@ class CurrencyRepository(
 ) {
 
 
-    suspend  fun getCurrenciesList(limit: Int, name: String): MutableList<Currency> {
+    suspend fun getCurrenciesList(limit: Int, name: String): MutableList<Currency> {
 
-        return  withContext(Dispatchers.IO) {
-            currencyApi.getCurrencyList( limit, name).data.map {
+        return withContext(Dispatchers.IO) {
+            currencyApi.getCurrencyList().data.map {
                 Currency(id = it.id, name = it.name, sign = it.sign)
 
             }
-        }as MutableList<Currency>
+        } as MutableList<Currency>
     }
 }

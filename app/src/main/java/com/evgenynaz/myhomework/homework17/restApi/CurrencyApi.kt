@@ -10,6 +10,5 @@ import retrofit2.http.Query
 interface CurrencyApi {
     @Headers("X-CMC_PRO_API_KEY: ${API_KEY}")
     @GET("v1/fiat/map")
-    suspend fun getCurrencyList(
-    ): CurrencyResponce
+    suspend fun getCurrencyList(): CurrencyResponce
 }
