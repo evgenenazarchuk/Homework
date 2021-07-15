@@ -4,16 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework13.Homework13Activity
-import com.evgenynaz.myhomework.homework15.Homework15Activity
-import com.evgenynaz.myhomework.homework2.Autos
-import com.evgenynaz.myhomework.homework3.Dog
-import com.evgenynaz.myhomework.homework3.Elephant
-import com.evgenynaz.myhomework.homework4.Chief
-import com.evgenynaz.myhomework.homework4.Manager
-import com.evgenynaz.myhomework.homework4.Worker
+import com.evgenynaz.myhomework.homework17.CurrencyActivity
 import com.evgenynaz.myhomework.homework6.Homework6Activity
 import com.evgenynaz.myhomework.homework7.Homework7Activity
 
@@ -24,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homework7one: Button
     private lateinit var homework10: Button
     private lateinit var homework13: Button
-    private lateinit var homework15: Button
+    private lateinit var homework17: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,9 +45,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent3)
         }
 
-        homework15 = findViewById(R.id.button15_homework)
-        homework15.setOnClickListener {
-            val intent4 = Intent(this, Homework15Activity::class.java)
+        homework17 = findViewById(R.id.button17_homework)
+        homework17.setOnClickListener {
+            val intent4 = Intent(this, CurrencyActivity::class.java)
             startActivity(intent4)
         }
         /*//Autos.editAuto()

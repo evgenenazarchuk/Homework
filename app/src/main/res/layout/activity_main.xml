@@ -8,12 +8,12 @@
 
 
     <Button
-        android:id="@+id/button15_homework"
+        android:id="@+id/button17_homework"
         android:layout_width="129dp"
         android:layout_height="56dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="428dp"
         android:backgroundTint="#5710D6"
-        android:text="@string/Homework15"
+        android:text="@string/Homework17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
