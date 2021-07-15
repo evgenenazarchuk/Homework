@@ -27,5 +27,8 @@ class CurrencyActivity : AppCompatActivity() {
             adapter = currencyAdapter
             layoutManager = LinearLayoutManager(this@CurrencyActivity)
         }
+            myViewModel.currenciesLiveData.observe(this, {
+                currencyAdapter.update(it)
+            })
+        }
     }
-}
