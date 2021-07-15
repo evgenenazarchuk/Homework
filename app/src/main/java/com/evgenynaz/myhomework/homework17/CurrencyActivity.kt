@@ -16,7 +16,6 @@ class CurrencyActivity : AppCompatActivity() {
     }
 
     private val currencyAdapter: CurrencyAdapter = CurrencyAdapter()
-    private lateinit var sortName: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
