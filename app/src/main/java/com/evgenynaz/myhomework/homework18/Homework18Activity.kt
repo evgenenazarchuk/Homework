@@ -49,15 +49,6 @@ class Homework18Activity : AppCompatActivity() {
             materialTimePicker.show(supportFragmentManager, "tag_picker")
         }
 
-        //Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                 intent =  Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                         Uri.parse("package:$packageName"))
-                startActivity(intent)
-            }
-        }*/
-
     }
 
     private fun getAlarmInfoPendingIntent(): PendingIntent? {
