@@ -7,4 +7,5 @@ class MySuperApp {
     val currencyRepository: CurrencyRepository by lazy {
         CurrencyRepository(CurrencyService.getCurrencyService())
     }
+
 }

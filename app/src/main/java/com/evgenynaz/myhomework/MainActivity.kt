@@ -7,6 +7,7 @@ import android.widget.Button
 import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework13.Homework13Activity
 import com.evgenynaz.myhomework.homework17.CurrencyActivity
+import com.evgenynaz.myhomework.homework18.Homework18Activity
 import com.evgenynaz.myhomework.homework6.Homework6Activity
 import com.evgenynaz.myhomework.homework7.Homework7Activity
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homework10: Button
     private lateinit var homework13: Button
     private lateinit var homework17: Button
+    private lateinit var homework18: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,9 +47,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent3)
         }
 
-        homework17 = findViewById(R.id.button17_homework)
+        homework17 = findViewById(R.id.button17_homework2)
         homework17.setOnClickListener {
             val intent4 = Intent(this, CurrencyActivity::class.java)
+            startActivity(intent4)
+        }
+        homework18 = findViewById(R.id.button18_homework)
+        homework18.setOnClickListener {
+            val intent4 = Intent(this, Homework18Activity::class.java)
             startActivity(intent4)
         }
         /*//Autos.editAuto()

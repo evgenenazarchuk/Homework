@@ -7,17 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/button17_homework"
-        android:layout_width="129dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="428dp"
-        android:backgroundTint="#5710D6"
-        android:text="@string/Homework17"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -76,6 +66,30 @@
         android:text="@string/Fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
+
+    <Button
+        android:id="@+id/button18_homework"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="440dp"
+        android:backgroundTint="#5710D6"
+        android:text="@string/Homework18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
+
+    <Button
+        android:id="@+id/button17_homework2"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="344dp"
+        android:backgroundTint="#5710D6"
+        android:text="@string/Homework17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button6_homework" />
 
