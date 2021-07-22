@@ -23,7 +23,7 @@ class Homework18Activity : AppCompatActivity() {
         binding.alarmButton.setOnClickListener {
             val materialTimePicker: MaterialTimePicker = MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_24H)
-                .setHour(12)
+                .setHour(0)
                 .setMinute(0)
                 .setTitleText("Выберите время для будильника")
                 .build()
