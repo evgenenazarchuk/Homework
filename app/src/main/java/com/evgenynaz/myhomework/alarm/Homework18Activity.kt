@@ -44,6 +44,19 @@ class Homework18Activity : AppCompatActivity() {
                     calendar.timeInMillis,
                     getAlarmInfoPendingIntent()
                 )
+
+                val notifuBpouk = Intent(this, NotificationBroadcast::class.java)
+                val pendingIntent1 = PendingIntent.getBroadcast(
+                    applicationContext,
+                    1,
+                    notifuBpouk,
+                    PendingIntent.FLAG_UPDATE_CURRENT
+                )
+
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent1)
+
+
+
                 alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent())
                 Toast.makeText(
                     applicationContext,
