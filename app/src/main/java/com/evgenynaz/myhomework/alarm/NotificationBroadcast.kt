@@ -32,7 +32,7 @@ class NotificationBroadcast : BroadcastReceiver() {
 
             val builder = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.mipmap.ic_launcher_round)
-                .setContentTitle("Hi, Владимир!")
+                .setContentTitle("Hi, Евгений!")
                 .setContentText("Пора вставать!!!")
                 .setContentIntent(contentIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
