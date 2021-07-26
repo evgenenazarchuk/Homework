@@ -1,9 +1,12 @@
-package com.evgenynaz.myhomework.homework18
+package com.evgenynaz.myhomework.alarm
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.evgenynaz.myhomework.databinding.AlarmActivityHomework18Binding
@@ -23,8 +26,10 @@ class Homework18Activity : AppCompatActivity() {
         binding.alarmButton.setOnClickListener {
             val materialTimePicker: MaterialTimePicker = MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_24H)
+
                 .setHour(0)
                 .setMinute(0)
+
                 .setTitleText("Выберите время для будильника")
                 .build()
             materialTimePicker.addOnPositiveButtonClickListener {
@@ -39,16 +44,26 @@ class Homework18Activity : AppCompatActivity() {
                     calendar.timeInMillis,
                     getAlarmInfoPendingIntent()
                 )
-                alarmManager.setAlarmClock(alarmClockInfo,  getAlarmActionPendingIntent())
+                alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent())
                 Toast.makeText(
-                    this,
+                    applicationContext,
                     "Будильник установлен на " + sdf.format(calendar.time),
                     Toast.LENGTH_SHORT
                 ).show()
             }
+
             materialTimePicker.show(supportFragmentManager, "tag_picker")
         }
-
+// Если не работает будильник в android 10, нужно запросить разрешение на показ окон поверх других приложений
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                val intent = Intent(
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:$packageName")
+                )
+                startActivity(intent)
+            }
+        }
     }
 
     private fun getAlarmInfoPendingIntent(): PendingIntent? {

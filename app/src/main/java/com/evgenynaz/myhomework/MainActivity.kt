@@ -7,7 +7,7 @@ import android.widget.Button
 import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework13.Homework13Activity
 import com.evgenynaz.myhomework.homework17.CurrencyActivity
-import com.evgenynaz.myhomework.homework18.Homework18Activity
+import com.evgenynaz.myhomework.alarm.Homework18Activity
 import com.evgenynaz.myhomework.homework6.Homework6Activity
 import com.evgenynaz.myhomework.homework7.Homework7Activity
 

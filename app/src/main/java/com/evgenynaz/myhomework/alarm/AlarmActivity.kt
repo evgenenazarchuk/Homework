@@ -1,13 +1,10 @@
-package com.evgenynaz.myhomework.homework18
+package com.evgenynaz.myhomework.alarm
 
 import android.media.Ringtone;
 import android.media.RingtoneManager;
-import android.net.Uri
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import com.evgenynaz.myhomework.R
 import com.evgenynaz.myhomework.databinding.ActivityAlarmBinding
-import com.evgenynaz.myhomework.databinding.ActivityHomework10Binding
 
 
 class AlarmActivity : AppCompatActivity() {
