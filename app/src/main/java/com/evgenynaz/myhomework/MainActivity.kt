@@ -8,6 +8,8 @@ import com.evgenynaz.myhomework.homework10.Homework10Activity
 import com.evgenynaz.myhomework.homework13.Homework13Activity
 import com.evgenynaz.myhomework.homework17.CurrencyActivity
 import com.evgenynaz.myhomework.alarm.Homework18Activity
+import com.evgenynaz.myhomework.homework12.Homework12Activity
+import com.evgenynaz.myhomework.homework16.Homework16Activity
 import com.evgenynaz.myhomework.homework6.Homework6Activity
 import com.evgenynaz.myhomework.homework7.Homework7Activity
 
@@ -17,7 +19,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homework6: Button
     private lateinit var homework7one: Button
     private lateinit var homework10: Button
+    private lateinit var homework12: Button
     private lateinit var homework13: Button
+    private lateinit var homework16: Button
     private lateinit var homework17: Button
     private lateinit var homework18: Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,22 +44,34 @@ class MainActivity : AppCompatActivity() {
             val intent2 = Intent(this, Homework10Activity::class.java)
             startActivity(intent2)
         }
+        homework12 = findViewById(R.id.button12_homework2)
+        homework12.setOnClickListener {
+            val intent3 = Intent(this, Homework12Activity::class.java)
+            startActivity(intent3)
+        }
+
 
         homework13 = findViewById(R.id.button13_homework)
         homework13.setOnClickListener {
-            val intent3 = Intent(this, Homework13Activity::class.java)
-            startActivity(intent3)
+            val intent4 = Intent(this, Homework13Activity::class.java)
+            startActivity(intent4)
+        }
+
+        homework16 = findViewById(R.id.button16_homework2)
+        homework16.setOnClickListener {
+            val intent5 = Intent(this, Homework16Activity::class.java)
+            startActivity(intent5)
         }
 
         homework17 = findViewById(R.id.button17_homework2)
         homework17.setOnClickListener {
-            val intent4 = Intent(this, CurrencyActivity::class.java)
-            startActivity(intent4)
+            val intent6 = Intent(this, CurrencyActivity::class.java)
+            startActivity(intent6)
         }
         homework18 = findViewById(R.id.button18_homework)
         homework18.setOnClickListener {
-            val intent4 = Intent(this, Homework18Activity::class.java)
-            startActivity(intent4)
+            val intent7 = Intent(this, Homework18Activity::class.java)
+            startActivity(intent7)
         }
         /*//Autos.editAuto()
         val dog = Dog("Mike", 50.5)
