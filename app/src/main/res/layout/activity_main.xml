@@ -7,7 +7,29 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/button16_homework2"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="#5710D6"
+        android:text="@string/Homework16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
 
+    <Button
+        android:id="@+id/button12_homework2"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#5710D6"
+        android:text="@string/Fragment1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button6_homework" />
 
     <TextView
         android:id="@+id/textView"

@@ -10,7 +10,7 @@ import com.evgenynaz.myhomework.databinding.ActivityHomework17Binding
 
 class CurrencyActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomework17Binding
+/*    private lateinit var binding: ActivityHomework17Binding
     private val myViewModel: Homework17ViewModel by viewModels {
         HomeWork17ViewModelFactory((application as MySuperApp).currencyRepository)
     }
@@ -32,6 +32,6 @@ class CurrencyActivity : AppCompatActivity() {
 
                 currencyAdapter.update(it)
             })
-        }
+        }*/
     }
 

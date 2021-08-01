@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHomework">
         <activity android:name=".MainActivity"
+
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,9 @@
         <activity android:name=".homework6.Homework6Activity"/>
         <activity android:name=".homework7.Homework7Activity"/>
         <activity android:name=".homework10.Homework10Activity"/>
+        <activity android:name=".homework12.Homework12Activity"/>
         <activity android:name=".homework13.Homework13Activity"/>
+        <activity android:name=".homework16.Homework16Activity"/>
         <activity android:name=".homework17.CurrencyActivity" />
         <activity android:name=".alarm.Homework18Activity" />
         <service
